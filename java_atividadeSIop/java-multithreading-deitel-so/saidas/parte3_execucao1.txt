@@ -1,0 +1,33 @@
+Operation                               Buffer		Occupied Count
+
+Initial State                           -1		0
+
+Consumer tries to read.
+Buffer empty. Consumer waits.           -1		0
+
+Producer writes 1                       1		1
+
+Consumer reads 1                        1		0
+
+Consumer tries to read.
+Buffer empty. Consumer waits.           1		0
+
+Producer writes 2                       2		1
+
+Consumer reads 2                        2		0
+
+Producer writes 3                       3		1
+
+Producer tries to write.
+Buffer full. Producer waits.            3		1
+
+Consumer reads 3                        3		0
+
+Producer writes 4                       4		1
+
+Producer done producing.
+Terminating Producer.
+Consumer reads 4                        4		0
+
+Consumer read values totaling: 10.
+Terminating Consumer.

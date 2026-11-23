@@ -1,0 +1,69 @@
+(buffers occupied: 0)
+buffers:  -1   -1   -1  
+         ---- ---- ---- 
+          WR            
+
+
+All buffers empty. Consumer waits.
+
+Producer writes 1 
+(buffers occupied: 1)
+buffers:  1   -1   -1  
+         ---- ---- ---- 
+           R   W        
+
+
+Consumer reads 1 
+(buffers occupied: 0)
+buffers:  1   -1   -1  
+         ---- ---- ---- 
+               WR       
+
+
+Producer writes 2 
+(buffers occupied: 1)
+buffers:  1   2   -1  
+         ---- ---- ---- 
+                R   W   
+
+
+Consumer reads 2 
+(buffers occupied: 0)
+buffers:  1   2   -1  
+         ---- ---- ---- 
+                    WR  
+
+
+All buffers empty. Consumer waits.
+
+Producer writes 3 
+(buffers occupied: 1)
+buffers:  1   2   3  
+         ---- ---- ---- 
+          W          R  
+
+
+Consumer reads 3 
+(buffers occupied: 0)
+buffers:  1   2   3  
+         ---- ---- ---- 
+          WR            
+
+
+Producer writes 4 
+(buffers occupied: 1)
+buffers:  4   2   3  
+         ---- ---- ---- 
+           R   W        
+
+Producer done producing.
+Terminating Producer.
+
+Consumer reads 4 
+(buffers occupied: 0)
+buffers:  4   2   3  
+         ---- ---- ---- 
+               WR       
+
+Consumer read values totaling: 10.
+Terminating Consumer.

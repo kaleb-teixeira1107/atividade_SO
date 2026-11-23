@@ -1,0 +1,97 @@
+(buffers occupied: 0)
+buffers:  -1   -1   -1  
+         ---- ---- ---- 
+          WR            
+
+
+Producer writes 1 
+(buffers occupied: 1)
+buffers:  1   -1   -1  
+         ---- ---- ---- 
+           R   W        
+
+
+Producer writes 2 
+(buffers occupied: 2)
+buffers:  1   2   -1  
+         ---- ---- ---- 
+           R        W   
+
+
+Producer writes 3 
+(buffers occupied: 3)
+buffers:  1   2   3  
+         ---- ---- ---- 
+          WR            
+
+
+All buffers full. Producer waits.
+
+Consumer reads 1 
+(buffers occupied: 2)
+buffers:  1   2   3  
+         ---- ---- ---- 
+          W     R       
+
+
+Producer writes 4 
+(buffers occupied: 3)
+buffers:  4   2   3  
+         ---- ---- ---- 
+               WR       
+
+
+All buffers full. Producer waits.
+
+Consumer reads 2 
+(buffers occupied: 2)
+buffers:  4   2   3  
+         ---- ---- ---- 
+               W     R  
+
+
+Producer writes 5 
+(buffers occupied: 3)
+buffers:  4   5   3  
+         ---- ---- ---- 
+                    WR  
+
+
+All buffers full. Producer waits.
+
+Consumer reads 3 
+(buffers occupied: 2)
+buffers:  4   5   3  
+         ---- ---- ---- 
+           R        W   
+
+
+Producer writes 6 
+(buffers occupied: 3)
+buffers:  4   5   6  
+         ---- ---- ---- 
+          WR            
+
+Producer done producing.
+
+Consumer reads 4 
+(buffers occupied: 2)
+buffers:  4   5   6  
+         ---- ---- ---- 
+          W     R       
+
+
+Consumer reads 5 
+(buffers occupied: 1)
+buffers:  4   5   6  
+         ---- ---- ---- 
+          W          R  
+
+
+Consumer reads 6 
+(buffers occupied: 0)
+buffers:  4   5   6  
+         ---- ---- ---- 
+          WR            
+
+Consumer read values totaling: 21.

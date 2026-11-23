@@ -1,0 +1,9 @@
+Starting threads
+Threads started, main ends
+
+thread3 going to sleep for 593 milliseconds
+thread1 going to sleep for 1336 milliseconds
+thread2 going to sleep for 4235 milliseconds
+thread3 done sleeping
+thread1 done sleeping
+thread2 done sleeping
